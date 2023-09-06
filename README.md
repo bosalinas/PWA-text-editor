@@ -1,149 +1,67 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# NoteTaker PWA
 
-## Your Task
+JATE PWA is a Progressive Web App (PWA) that allows you to write and save your notes effortlessly. Whether you need to jot down a quick idea, make a to-do list, or keep track of important information, JATE has got you covered. With its intuitive interface and offline capabilities, you can access your notes anytime, anywhere.
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+## Features
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+- **Create Notes**: Easily create new notes with a title and content.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+- **Edit Notes**: Edit and update your notes as your thoughts evolve.
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+## Installation
 
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to heroku.
+To install and use NoteTaker PWA, follow these simple steps:
 
-## User Story
+1. **Visit the App**: Follow the development instructions to launch on a localhost connection
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+2. **Add to Home Screen**: On supported browsers (e.g., Chrome, Firefox, Safari), you'll be prompted to add JATE PWA to your home screen. Click the option to add it.
 
-## Acceptance Criteria
+3. **Launch**: Open the app from your home screen like any other application.
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+## Usage
 
-## Mock-Up
+1. **Create a Note**: Click the "New Note" button to create a new note. Give it a title and start typing your content.
 
-The following animation demonstrates the application functionality:
+2. **Edit a Note**: Tap on a note to edit its content or title. Save your changes by clicking the "Save" button.
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+3. **Offline Access**: Even without an internet connection, you can continue to use and edit your notes. Syncing will occur when you're back online.
 
-The following image shows the application's `manifest.json` file:
+## Development
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+If you're interested in contributing to NoteTaker PWA or running it locally for development purposes, follow these steps:
 
-The following image shows the application's registered service worker:
+1. Clone the repository:
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+   ```bash
+   git clone 
+   ```
 
-The following image shows the application's IndexedDB storage:
+2. Navigate to the project directory:
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+   ```bash
+   cd PWA-text-editor
+   ```
 
-## Grading Requirements
+3. Install the necessary dependencies:
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+   ```bash
+   npm install
+   ```
+4. Build the development server:
 
-This Challenge is graded based on the following criteria:
+   ```bash
+   npm run build
+   ```
 
-### Technical Acceptance Criteria: 40%
+4. Start the development server:
 
-* Satisfies all of the above acceptance criteria plus the following:
+   ```bash
+   npm start
+   ```
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
-
-  * The application works without an internet connection
-
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Heroku at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access NoteTaker PWA locally.
 
 
-- webpack working correctly 
-- manifest and SW settings correct 
-- test pwa 
+## License
+
+NoteTaker PWA is licensed under the [MIT License](LICENSE.md).

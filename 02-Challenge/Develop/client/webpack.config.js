@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+
 
 //Add and configure workbox plugins for a service worker and manifest file.
 //Add CSS loaders and babel to webpack.
@@ -18,10 +20,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      new NodePolyfillPlugin(),
       // Webpack plugin that generates our html file and injects our bundles. 
+
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'Text Editor'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -30,9 +34,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'Text Editor',
+        short_name: 'Editor',
+        description: 'Edits notes offline',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
