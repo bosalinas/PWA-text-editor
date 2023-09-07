@@ -63,7 +63,7 @@ If you're interested in contributing to NoteTaker PWA or running it locally for 
 
 ## App
 
-[Heroku](https://lit-sea-36345-7f379bce7510.herokuapp.com/)
+Heroku Application: [Heroku](https://lit-sea-36345-7f379bce7510.herokuapp.com/)
 
 ## License
 
